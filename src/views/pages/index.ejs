@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html lang='en'>
     <head>
-        <title>My todolist</title>
-        <style>
-            a {text-decoration: underline; color: black;}
-        </style>
+      <% include ../partials/head %>
     </head>
-
     <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+
+    <main>
         <h1>My todolist</h1>
 
-        <ul>
+        <ul> 
             <li><a href="/todo/delete/:taskID">✘</a> <%= :taskID %></li>
         </ul>
 
@@ -22,5 +23,10 @@
                 <input type="submit" />
             </p>
         </form>
+
+      <footer>
+        <% include ../partials/footer %>
+      </footer>
+    </main>
     </body>
 </html>
