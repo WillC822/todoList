@@ -11,7 +11,8 @@ module.exports = (express) => {
 
   // Routes
   router.get('/', function(req, res, next) {
-    res.render('index', {condition: false });
+    res.render('index',
+  );
   });
 
   router.use('/api/', require('./api/todoList')(express));

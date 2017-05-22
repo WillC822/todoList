@@ -8,13 +8,13 @@ app.set('view engine', 'ejs');
 const port = process.env.PORT || 3000;
 
 app.use(session({secret: 'todotopsecret'}));
-app.use(bodyParser.json());
+app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({
   extended:true,
 }));
 
 app.get('/', (req,res) => {
-  res.render('pages/index');
+  res.render('views/pages/index');
 });
 
 app.use(function(err, req, res, next) {
